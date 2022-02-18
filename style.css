@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Inter:wght@200&family=Neonderthaw&family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=The+Nautigal:wght@400;700&display=swap');
+
+
+:root{
+    --white:#fff;
+    --light-dark:#444;
+    --orange:#e75b1e;
+    --bg-aboutUs:#e6e6e6;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+    height: 6000px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+section{
+    padding: 5rem 8%;
+}
+
+header{
+    padding: 2rem 9%;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+
+header .logo img{
+    width: 50px;
+}
+
+header .navigation{
+    display: flex;
+    list-style: none;
+    column-gap: 25px;
+    position: relative;
+    visibility: visible;
+    height: 30px;
+}
+
+
+header .navigation li{
+    overflow: hidden;
+}
+
+header  .navigation li{
+    position: relative;
+}
+
+header .navigation li:nth-child(1)::before{
+    content: '';
+    background: var(--orange);
+    width: 100%;
+    height: 6px;
+    bottom:0;
+    border-radius: 5px;
+    position: absolute;
+}
+
+header .navigation li::before{
+    content: '';
+    background: grey;
+    width: 100%;
+    height: 6px;
+    bottom: -2px;
+    left: -150px;
+    border-radius: 3px;
+    position: absolute;
+    transition: .7s;
+}
+
+header .navigation li:hover::before{
+    content: '';
+    background: grey;
+    width: 100%;
+    height: 6px;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+    position: absolute;
+    animation: slideColor 1s linear;
+}
+
+@keyframes slideColor{
+    50%{
+        background: gray;
+    }
+    100%{
+        background: var(--orange);
+    }
+}
+
+header .navigation li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+header.sticky{
+    background: var(--light-dark);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Header Burger Menu */
+header .burgerMenu{
+    display: none;
+    cursor: pointer;
+}
+
+.bars1{
+    background-color: var(--orange);
+    width: 50px;
+    height: 5px;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    transition: .5s;
+}
+
+.bars1.change{
+    transform: rotate(-45deg) translate(-9px);
+    transition: .5s;
+}
+.bars2.change{
+    transform: translateX(100px);
+    transition: .5s;
+    visibility: hidden;
+}
+.bars3.change{
+    transform: rotate(45deg) translate(-10px);
+    transition: .5s;
+}
+
+.bars2, .bars3{
+    background-color: var(--orange);
+    width: 50px;
+    height: 5px;
+    margin-bottom: 3px;
+    border-radius: 4px;
+    transition: .5s;
+}
+
+
+header .hiddenNavbar{
+    background:var(--light-dark);
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: -500px;
+    transition: 1s;
+}
+
+header .hiddenNavbar.change{
+    background:var(--light-dark);
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 128px;
+    padding: 2rem 8%;
+    transition: 1s;
+}
+
+header .hiddenNavbar ul{
+    list-style: none;
+}
+
+header .hiddenNavbar ul li{
+    margin-top: 30px;
+    height: 30px;
+    width: 100%;
+        position: relative;
+}
+
+header .hiddenNavbar ul li a:before{
+    content: '';
+    background: grey;
+    width: 100%;
+    height: 3px;
+    bottom: -10px;
+    left: -130%;
+    border-radius: 3px;
+    position: absolute;
+    transition: 1s;
+}
+header .hiddenNavbar ul li a:hover:before{
+    content: '';
+    background: grey;
+    width: 100%;
+    height: 3px;
+    bottom: -10px;
+    left: 0;
+    border-radius: 3px;
+    position: absolute;
+    animation: slideColor 1s linear;
+}
+
+header .hiddenNavbar ul li a{
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    position: absolute;
+    width: 100%;
+}
+
+/* Banner */
+.banner{
+    background: url('bgBanner.png');
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner .content{
+    margin-top: 100px;
+}
+
+.banner .content h1{
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--orange);
+    font-size: 4.5rem;
+    max-width: 800px;
+    font-weight: bold;
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Neonderthaw', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'The Nautigal', cursive;
+}
+
+.banner .content h1 span{
+    color: #fff;
+}
+
+.banner .content .orderbtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    list-style: none;
+}
+
+.banner .content .orderbtn li{
+    margin-top: 30px;
+    width: 240px;
+    background: var(--orange);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .content .orderbtn li:hover{
+    background: transparent;
+    border: 4px solid var(--orange);
+}
+
+.banner .content .orderbtn li a{
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.banner  .mouse{
+    margin-top: 30px;
+    width: 60px;
+    height: 110px;
+    border: 3px solid var(--white);
+    border-radius: 20px;
+    position: relative;
+}
+
+.banner .mouse::before{
+    content: '';
+    border: 3px solid var(--white);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 33%;
+    top: 10%;
+    animation: mouse 1.3s infinite;
+}   
+
+@keyframes mouse {
+    100%{
+        transform: translateY(30px);
+    }
+}
+
+
+/* About us */
+.aboutUs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: var(--bg-aboutUs);
+}
+
+.aboutUs .content{
+    max-width: 500px;
+}
+
+.aboutUs .content h3{
+    text-transform: capitalize;
+    color: var(--orange);
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.aboutUs .content span{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--light-dark);
+}
+
+.aboutUs p{
+    color: var(--light-dark);
+    line-height: 25px;
+    margin-top: 8px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.aboutUs .sci{
+    display: inline-flex;
+    list-style: none;
+}
+
+.aboutUs .sci li{
+    margin-right: 10px;
+}
+
+.aboutUs .sci li i{
+    font-size: 1.4rem;
+}
+
+.aboutUs .sci li:nth-child(1) i{
+    color: red;
+}
+
+.aboutUs .sci li:nth-child(2) i{
+    color: blue;
+}
+
+.aboutUs .imgBox{
+    max-width: 400px;
+    max-height: 400px;
+    position: relative;
+    border: 8px solid var(--white);
+    border-radius: 50%;
+}
+
+.aboutUs .imgBox::before{
+    content: '';
+    background: url('menu5.jpg');
+    width:150px;
+    height: 150px;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 8px solid var(--white);
+}
+
+.aboutUs .imgBox img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.specialMenu{
+    background: url('paralaxx.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.specialMenu::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+}
+
+.specialMenu h3{
+    color: var(--orange);
+    font-size: 5rem;
+    text-transform: capitalize;
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Neonderthaw', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'The Nautigal', cursive;
+    z-index: 2;
+    margin-top: -60px;
+}
+.specialMenu  .contentBox{
+    display: flex;
+    width: 100%;
+}
+
+.specialMenu p{
+    color: var(--white);
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    z-index: 2;
+    margin-bottom: 30px;
+}
+
+.specialMenu p span{
+    color: var(--orange);
+}
+
+.specialMenu p span i{
+    color: var(--white);
+    animation: arrow 1s infinite;
+}
+
+@keyframes arrow {
+    100%{
+        transform: translateX(10px);
+    }
+}
+
+.specialMenu .contentBox .images{
+    max-width: 400px;
+    height: 500px;
+    margin: 5px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+
+.specialMenu .contentBox .images img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 3px solid var(--white);
+}
+
+.specialMenu .contentBox .images .overlay h5{
+    color: var(--white);
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    margin-top: 80%;
+    position: relative;
+}
+
+.specialMenu .contentBox .images .overlay h5::before{
+    content: '';
+    background: var(--white);
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+}
+
+.specialMenu .contentBox .images .overlay p{
+    color: var(--white);
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.specialMenu .contentBox .images:hover .overlay{
+    background: var(--orange);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 50%;
+    cursor: pointer;
+    transition: .6s;
+    padding: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1115px){    
+    header .navigation{
+        display: none;
+    }
+
+    header .burgerMenu{
+        display: block;
+    }
+
+    .aboutUs{
+        justify-content: space-around;
+    }
+
+    .specialMenu .contentBox .images{
+        max-width: 300px;
+        max-height: 400px;
+        }
+}
+
+@media (max-width:768px) {
+    .specialMenu h3{
+        font-size: 1.3rem;
+    }
+
+    .specialMenu p{
+        font-size: .7rem;
+        text-align: center;
+    }
+
+    .specialMenu .contentBox .images{
+    max-width: 350px;
+    max-height: 400px;
+    }
+    
+}
+
+@media (max-width:480px) {
+    .aboutUs .imgBox::before{
+        width:80px;
+        height: 80px;
+    }
+
+    .specialMenu h3{
+        color: var(--orange);
+        font-size: 2.1rem;
+        margin-top: -20px;
+        text-align: center;
+    }
+
+    .specialMenu p{
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+}
