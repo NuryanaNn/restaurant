@@ -42,3 +42,29 @@ var swiper = new Swiper(".contentBox", {
         },
     },
 });
+
+let list = document.querySelectorAll('.list');
+        let foodMenu = document.querySelectorAll('.foodMenu');
+
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener('click', function () {
+                for (let j = 0; j < list.length; j++) {
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for (let k = 0; k < foodMenu.length; k++) {
+                    foodMenu[k].classList.remove('active');
+                    foodMenu[k].classList.add('hide');
+
+                    if (foodMenu[k].getAttribute('data-item') == dataFilter || dataFilter == "all") {
+                        foodMenu[k].classList.remove('hide');
+                        foodMenu[k].classList.add('active');
+                    }
+                }
+
+
+            })
+        }
