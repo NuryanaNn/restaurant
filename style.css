@@ -16,7 +16,7 @@ box-sizing:border-box;
 }
 
 body{
-    height: 6000px;
+    height: 15000px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -643,6 +643,135 @@ header .hiddenNavbar ul li a{
     font-size: 1.1rem;
 }
 
+.ourGalleri h3{
+    color: var(--orange);
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.9rem;
+}
+
+.ourGalleri .content{
+    margin-top: 40px;
+    display: flex;
+    row-gap: 10px;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ourGalleri .content .images{
+    max-width: 350px;
+}
+
+.ourGalleri .content .images img{
+    width: 100%;
+}
+
+.ourGalleri .content .images{
+    position: relative;
+}
+
+.ourGalleri .content .images:hover .overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 70%;
+    top: 0;
+    background: var(--orange);
+    transition: .7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ourGalleri .content .images a{
+    z-index: 10;
+}
+
+.ourGalleri .content .images i{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    visibility: hidden;
+    color: var(--white);
+    font-size: 1.7rem;
+}
+
+.ourGalleri .content .images:hover i{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    visibility: visible;
+}
+
+
+
+/* Party Rooms */
+.partyRoom{
+    background: url('paralaxx.png');
+    max-height: 1800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.partyRoom h3{
+    text-align: center;
+    color: var(--orange);
+    text-transform: capitalize;
+    font-size: 1.9rem;
+}
+
+.partyRoom .contentRoom{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    justify-content: space-around;
+}
+
+.partyRoom .contentRoom .content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: var(--white);
+    max-width: 500px;
+    justify-content: center;
+    row-gap: 10px;
+    position: relative;
+    margin-top: 20px;
+    padding: 20px 10px;
+}
+
+.partyRoom .contentRoom .content .images{
+    max-width: 300px;
+    height: 150px;
+}
+
+.partyRoom .contentRoom .content .images img{
+    width: 100%;
+    height: 100%;
+}
+
+.partyRoom .contentRoom .content .text{
+    margin-left: 5px;
+}
+
+.partyRoom .contentRoom .content .text h3{
+    font-size: 1rem;
+    color: var(--light-dark);
+    margin-top: 5px;
+    color: var(--orange);
+}
+
+.partyRoom .contentRoom .content .text p{
+    max-width: 200px;
+    font-size: .8rem;
+    color: var(--light-dark);
+}
+
+
 
 
 
@@ -668,10 +797,15 @@ header .hiddenNavbar ul li a{
         justify-content: space-around;
     }
 
+    
+.specialMenu{
+    height: 700px;
+}
+
     .specialMenu .contentBox .images{
         max-width: 300px;
         max-height: 400px;
-        }
+    }
 }
 
 @media (max-width:768px) {
@@ -688,6 +822,8 @@ header .hiddenNavbar ul li a{
     max-width: 350px;
     max-height: 400px;
     }
+
+
     
 }
 
@@ -705,7 +841,7 @@ header .hiddenNavbar ul li a{
     }
 
     .specialMenu p{
-        font-size: 1rem;
+        font-size: .7rem;
         text-align: center;
     }
 
