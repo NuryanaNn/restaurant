@@ -20,31 +20,8 @@ burgerMenu.addEventListener('click', function(){
 })
 
 
-var swiper = new Swiper(".contentBox", {
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-        delay: 3000,
-        disabledonINteraction: false,
-    },
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
-        },
-        480:{
-        	slidesPerView: 1,
-        },
-        768: {
-            slidesPerView: 2,
-        },
-        1024: {
-            slidesPerView: 3,
-        },
-    },
-});
-
 let list = document.querySelectorAll('.list');
-        let foodMenu = document.querySelectorAll('.foodMenu');
+let foodMenu = document.querySelectorAll('.foodMenu');
 
         for (let i = 0; i < list.length; i++) {
             list[i].addEventListener('click', function () {
@@ -68,3 +45,28 @@ let list = document.querySelectorAll('.list');
 
             })
         }
+
+
+var swiper = new Swiper(".contentBox", {
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 3000,
+        disabledonINteraction: false,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        480:{
+        	slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+        },
+    },
+});
+
