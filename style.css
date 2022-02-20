@@ -222,7 +222,7 @@ header .hiddenNavbar ul li a{
 
 /* Banner */
 .banner{
-    background: url('bgBanner.png');
+    background: url('img/bgBanner.png');
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -382,7 +382,7 @@ header .hiddenNavbar ul li a{
 
 .aboutUs .imgBox::before{
     content: '';
-    background: url('menu5.jpg');
+    background: url('img/menu5.jpg');
     width:150px;
     height: 150px;
     z-index: 100;
@@ -402,7 +402,7 @@ header .hiddenNavbar ul li a{
 }
 
 .specialMenu{
-    background: url('paralaxx.png') no-repeat;
+    background: url('img/paralaxx.png') no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -471,10 +471,10 @@ header .hiddenNavbar ul li a{
     text-align: center;
 }
 
-/* .specialMenu .contentBox .swiper-wrapper{
+.specialMenu .contentBox .swiper-wrapper{
     display: flex;
     flex-direction: row;
-} */
+}
 
 .specialMenu .contentBox .images img{
     width: 100%;
@@ -711,7 +711,7 @@ header .hiddenNavbar ul li a{
 
 /* Party Rooms */
 .partyRoom{
-    background: url('paralaxx.png');
+    background: url('img/paralaxx.png');
     max-height: 1800px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -861,7 +861,7 @@ header .hiddenNavbar ul li a{
 
 /* Newslatter */
 .newslatter{
-    background:url('bgNewsletter.png');
+    background:url('img/bgNewsletter.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -909,7 +909,7 @@ header .hiddenNavbar ul li a{
 
 /* Footer */
 .footer{
-    background: url('bgFooter.png');
+    background: url('img/bgFooter.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
